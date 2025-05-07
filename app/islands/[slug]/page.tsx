@@ -26,7 +26,7 @@ export default function IslandPage({ params }: { params: { slug: string } }) {
       <div className="flex">
         <Image src={island.image} alt={island.name} width={600} height={400} className="rounded-xl mb-4" />
         <div className="flex-1 flex items-center justify-center">
-          <div className="text-6xl font-extrabold text-red-800 drop-shadow-lg">{island.price} AUD</div>
+          <div className="text-6xl font-extrabold text-red-800 drop-shadow-lg">{island.price}</div>
         </div>
       </div>
       <p className="mb-8 text-lg">{island.description}</p>
