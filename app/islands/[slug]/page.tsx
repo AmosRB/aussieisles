@@ -3,18 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { islands } from '../../../data/islands';
 
-<<<<<<< HEAD
-export default async function IslandPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function IslandPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const island = islands.find((i) => i.slug === slug);
-=======
-export default async function IslandPage({ params }: { params: { slug: string } }) {
-  const island = islands.find((i) => i.slug === params.slug);
->>>>>>> fc11eab8575618b13be30f0fb4a093a8f362dbdd
 
   if (!island) {
     notFound();
