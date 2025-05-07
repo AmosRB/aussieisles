@@ -3,12 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { islands } from '../../../data/islands';
 
-export default async function IslandPage({ params }: { params: { slug: string } }): Promise<JSX.Element> {
+export default async function IslandPage({ params }: { params: { slug: string } }): Promise<JSX.Element | null> {
   const island = islands.find((i) => i.slug === params.slug);
 
   if (!island) {
     notFound();
-    return Promise.resolve(null);
+    return null; // מחזיר null אם לא נמצא
   }
 
   return (
