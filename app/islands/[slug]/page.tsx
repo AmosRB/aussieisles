@@ -3,16 +3,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { islands } from '../../../data/islands';
 
-export default function IslandPage({ params }: { params: { slug: string } }) {
+interface IslandPageProps {
+  params: { slug: string };
+}
+
+export default function IslandPage({ params }: IslandPageProps) {
   const island = islands.find((i) => i.slug === params.slug);
 
   if (!island) {
     notFound();
+    return null; // מוסיפים return כדי לצאת אחרי notFound
   }
 
   return (
     <main className="relative p-8 min-h-screen bg-gradient-to-b from-[oklch(95.6%_0.045_203.388)] to-[oklch(91%_0.096_180.426)] text-black">
-      {/* כפתור BACK בצד ימין למעלה */}
       <div className="absolute top-4 right-4">
         <Link
           href="/"
