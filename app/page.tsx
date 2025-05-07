@@ -18,13 +18,16 @@ export default function Home() {
         <Image
           src="/images/islands/myisland.jpg"
           alt="My Island"
-          width={1750}
+          width={1800}
           height={1800}
           className="object-contain mx-auto"
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
           <h1 className="text-4xl font-bold mb-2 text-white drop-shadow">Aussie.Isles</h1>
-          <h2 className="text-xl italic text-white drop-shadow">The place where islands come true</h2>
+          <h2 className="absolute top-[350px] left-1/2 transform -translate-x-1/2 text-3xl italic text-white drop-shadow whitespace-nowrap tracking-widest"  style={{ color: '#FF8800' }}>
+  The place where islands come true
+</h2>
+
         </div>
       </div>
 
