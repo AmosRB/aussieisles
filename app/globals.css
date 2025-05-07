@@ -32,3 +32,15 @@ body::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
+@keyframes slideOut {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-slideOut {
+  animation: slideOut 1.2s ease forwards;
+}
