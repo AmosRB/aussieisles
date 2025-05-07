@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #b3ecf8;
 }
 
 @theme inline {
@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* מסתיר את פס הגלילה בדפדפן */
+
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+

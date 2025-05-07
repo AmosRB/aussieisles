@@ -1,0 +1,26 @@
+[
+    {
+      "slug": "hamilton",
+      "name": "Hamilton Island",
+      "description": "A tropical escape in the Whitsundays.",
+      "image": "/images/islands/hamilton.jpg"
+    },
+    {
+      "slug": "fraser",
+      "name": "Fraser Island",
+      "description": "The world's largest sand island, rich in wildlife.",
+      "image": "/images/islands/fraser.jpg"
+    },
+    {
+        "slug": "surfers",
+        "name": "surfers island",
+        "description": "All weather surfing in a unic bay.",
+        "image": "/images/islands/surfers.jpg"
+      },
+      {
+        "slug": "Sweers",
+        "name": "Sweers Island",
+        "description": "Looking for that ultimate island sea change with amazing resort and fishing and adventure tours with income.  .",
+        "image": "/images/islands/Sweers.jpg"
+      }
+  ]
