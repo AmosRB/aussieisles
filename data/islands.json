@@ -1,26 +1,88 @@
 [
-    {
-      "slug": "hamilton",
-      "name": "Hamilton Island",
-      "description": "A tropical escape in the Whitsundays.",
-      "image": "/images/islands/hamilton.jpg"
-    },
+  {
+    "slug": "hamilton",
+    "name": "Hamilton Island",
+    "description": "A tropical escape in the Whitsundays.",
+    "image": "/images/islands/hamilton.jpg",
+    "location": "Whitsundays, Queensland",
+    "area": "5",
+    "population": "1,200",
+    "waterInfrastructure": "Modern desalination plant",
+    "electricalInfrastructure": "Fully connected to mainland grid",
+    "sewerageInfrastructure": "Central treatment facility",
+    "proximityToBeach": "Direct beachfront",
+    "natureReserve": "Yes, protected marine park"
+  }
+  ,
     {
       "slug": "fraser",
       "name": "Fraser Island",
       "description": "The world's largest sand island, rich in wildlife.",
-      "image": "/images/islands/fraser.jpg"
+      "image": "/images/islands/fraser.jpg",
+     "location": "Whitsundays, Queensland",
+    "area": "5",
+    "population": "1,200",
+    "waterInfrastructure": "Modern desalination plant",
+    "electricalInfrastructure": "Fully connected to mainland grid",
+    "sewerageInfrastructure": "Central treatment facility",
+    "proximityToBeach": "Direct beachfront",
+    "natureReserve": "Yes, protected marine park"
+      
     },
     {
         "slug": "surfers",
         "name": "surfers island",
         "description": "All weather surfing in a unic bay.",
-        "image": "/images/islands/surfers.jpg"
+        "image": "/images/islands/surfers.jpg",
+        "location": "Whitsundays, Queensland",
+    "area": "5",
+    "population": "1,200",
+    "waterInfrastructure": "Modern desalination plant",
+    "electricalInfrastructure": "Fully connected to mainland grid",
+    "sewerageInfrastructure": "Central treatment facility",
+    "proximityToBeach": "Direct beachfront",
+    "natureReserve": "Yes, protected marine park"
       },
       {
         "slug": "Sweers",
         "name": "Sweers Island",
         "description": "Ultimate island with amazing resort and fishing and adventure tours with income.  .",
-        "image": "/images/islands/Sweers.jpg"
+        "image": "/images/islands/Sweers.jpg",
+        "location": "Whitsundays, Queensland",
+    "area": "5",
+    "population": "1,200",
+    "waterInfrastructure": "Modern desalination plant",
+    "electricalInfrastructure": "Fully connected to mainland grid",
+    "sewerageInfrastructure": "Central treatment facility",
+    "proximityToBeach": "Direct beachfront",
+    "natureReserve": "Yes, protected marine park"
+      },
+      {
+        "slug": "Seagull",
+        "name": "Seagull Island",
+        "description": "Bird heaven - The perfect island for recreation and retyerment",
+        "image": "/images/islands/Seagull.jpg",
+        "location": "Whitsundays, Queensland",
+    "area": "5",
+    "population": "1,200",
+    "waterInfrastructure": "Modern desalination plant",
+    "electricalInfrastructure": "Fully connected to mainland grid",
+    "sewerageInfrastructure": "Central treatment facility",
+    "proximityToBeach": "Direct beachfront",
+    "natureReserve": "Yes, protected marine park"
+      },
+      {
+        "slug": "SunDance",
+        "name": "Sun Dance Island",
+        "description": "Ultimate island for dancing yourself away.",
+        "image": "/images/islands/SunDance.jpg",
+        "location": "Whitsundays, Queensland",
+    "area": "5",
+    "population": "1,200",
+    "waterInfrastructure": "Modern desalination plant",
+    "electricalInfrastructure": "Fully connected to mainland grid",
+    "sewerageInfrastructure": "Central treatment facility",
+    "proximityToBeach": "Direct beachfront",
+    "natureReserve": "Yes, protected marine park"
       }
   ]
