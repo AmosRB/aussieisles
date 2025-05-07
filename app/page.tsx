@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import islands from '../data/islands.json';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Typewriter } from 'react-simple-typewriter';
 
 export default function Home() {
   useEffect(() => {
@@ -23,10 +24,32 @@ export default function Home() {
           className="object-contain mx-auto"
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
-          <h1 className="text-4xl font-bold mb-2 text-white drop-shadow">Aussie.Isles</h1>
-          <h2 className="absolute top-[350px] left-1/2 transform -translate-x-1/2 text-3xl italic text-white drop-shadow whitespace-nowrap tracking-widest"  style={{ color: '#FF8800' }}>
-  The place where islands come true
+        <h1
+  className="text-8xl font-extrabold text-transparent"
+  style={{
+    WebkitTextStroke: '2pxrgb(55, 5, 220)', // קו מתאר כתום
+    color: 'rgba(28, 28, 107, 0.65)', // צבע פנימי חצי שקוף (לבן ב-40%)
+    textShadow: '0 0 10pxrgb(255, 174, 0), 0 0 20px #FF8800, 0 0 30pxrgba(255, 166, 0, 0.95)', // זוהר נאון
+  }}
+>
+  Aussie.Isles
+</h1>
+
+          <h2
+  className="absolute top-[350px] left-1/2 transform -translate-x-1/2 text-3xl italic drop-shadow whitespace-nowrap"
+  style={{ color: '#FF8800', letterSpacing: '0.5em' }}
+>
+  <Typewriter
+    words={['The place where islands come true']}
+    loop={true}
+    cursor
+    cursorStyle='_'
+    typeSpeed={80}
+    deleteSpeed={50}
+    delaySpeed={10000}
+  />
 </h2>
+
 
         </div>
       </div>
