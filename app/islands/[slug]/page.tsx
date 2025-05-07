@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { islands } from '../../../data/islands';
 
-export default function IslandPage({ params }: { params: { slug: string } }) {
+export default async function IslandPage({ params }: { params: { slug: string } }) {
   const island = islands.find((i) => i.slug === params.slug);
 
   if (!island) {
