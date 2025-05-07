@@ -3,12 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { islands } from '../../../data/islands';
 
-interface IslandPageProps {
-  params: { slug: string };
-}
-
-export default async function IslandPage({ params }: IslandPageProps) {
-  const island = islands.find((i) => i.slug === params.slug);
+export default async function IslandPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const island = islands.find((i) => i.slug === slug);
 
   if (!island) {
     notFound();
@@ -16,7 +17,6 @@ export default async function IslandPage({ params }: IslandPageProps) {
 
   return (
     <main className="relative p-8 min-h-screen bg-gradient-to-b from-[oklch(95.6%_0.045_203.388)] to-[oklch(91%_0.096_180.426)] text-black">
-      {/* כפתור BACK בצד ימין למעלה */}
       <div className="absolute top-4 right-4">
         <Link
           href="/"
@@ -30,7 +30,7 @@ export default async function IslandPage({ params }: IslandPageProps) {
       <div className="flex">
         <Image src={island.image} alt={island.name} width={600} height={400} className="rounded-xl mb-4" />
         <div className="flex-1 flex items-center justify-center">
-          <div className="text-6xl font-extrabold text-red-800 drop-shadow-lg">{island.price} AUD</div>
+          <div className="text-6xl font-extrabold text-red-800 drop-shadow-lg">{island.price}</div>
         </div>
       </div>
       <p className="mb-8 text-lg">{island.description}</p>
