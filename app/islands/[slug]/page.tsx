@@ -77,20 +77,3 @@ export default async function IslandPage({ params }: { params: Promise<{ slug: s
     </main>
   );
 }
-
-function IslandCard({ island, index }: { island: Island; index: number }) {
-  return (
-    <Link href={`/islands/${island.slug}`} passHref>
-      <div
-        data-aos="zoom-in-up"
-        className={`cursor-pointer flex flex-col lg:flex-row ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''} items-center gap-4 sm:gap-8 bg-transparent rounded-xl p-4 shadow-lg hover:shadow-xl transition`}
-      >
-        <Image src={island.image} alt={island.name} width={675} height={480} className="rounded-xl shadow-md w-full lg:w-1/2" />
-        <div className="text-center lg:text-left lg:w-1/2">
-          <h3 className="text-xl sm:text-2xl font-semibold mb-2">{island.name}</h3>
-          <p className="text-sm mb-2">{island.description}</p>
-        </div>
-      </div>
-    </Link>
-  );
-}

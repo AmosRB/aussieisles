@@ -81,7 +81,7 @@ export default function Home() {
           </h1>
 
           <h2
-            className="relative top-8 sm:top-45 text-xl sm:text-2xl md:text-3xl italic drop-shadow main-subtitle"
+            className="relative top-10 sm:top-50 text-xl sm:text-2xl md:text-3xl italic drop-shadow main-subtitle"
             style={{ color: '#FF8800', letterSpacing: '0.3em' }}
           >
 
