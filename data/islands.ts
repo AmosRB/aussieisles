@@ -94,6 +94,23 @@ export const islands = [
           natureReserve: "Yes, protected marine park",
           price: "1,230,000 AUD"
 
+        },
+
+        {
+          slug: "Flat",
+          name: "Flat Island",
+          description: "An all year stable home base for recreation and getaway.",
+          image: "/images/islands/Flat.jpg",
+          location: "Whitsundays, Queensland",
+          area: "5",
+          population: "1,200",
+          waterInfrastructure: "Modern desalination plant",
+          electricalInfrastructure: "Fully connected to mainland grid",
+          sewerageInfrastructure: "Central treatment facility",
+          proximityToBeach: "Direct beachfront",
+          natureReserve: "Yes, protected marine park",
+          price: "730,000 AUD"
+
         }
       ];
       
