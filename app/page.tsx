@@ -8,10 +8,54 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Typewriter } from 'react-simple-typewriter';
 
+interface Island {
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+  price: string;
+  location: string;
+  area: string;
+  population: string;
+  waterInfrastructure: string;
+  electricalInfrastructure: string;
+  sewerageInfrastructure: string;
+  proximityToBeach: string;
+  natureReserve: string;
+}
+
+function IslandCard({ island, index }: { island: Island; index: number }) {
+  return (
+    <Link href={`/islands/${island.slug}`} passHref>
+      <div
+        data-aos="zoom-in-up"
+        className={`cursor-pointer flex flex-col lg:flex-row ${
+          index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
+        } items-center gap-4 sm:gap-8 bg-transparent rounded-xl p-4 shadow-lg hover:shadow-xl transition`}
+      >
+        <Image
+          src={island.image}
+          alt={island.name}
+          width={675}
+          height={480}
+          className="rounded-xl shadow-md w-full lg:w-1/2"
+        />
+        <div className="text-center lg:text-left lg:w-1/2">
+          <h3 className="text-xl sm:text-2xl font-semibold mb-2">{island.name}</h3>
+          <p className="text-sm mb-2">{island.description}</p>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+
 export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
+
+  
 
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-[oklch(2%_0.199_265.638)] to-[oklch(62.3%_0.214_259.815)]">
@@ -72,19 +116,3 @@ export default function Home() {
   );
 }
 
-function IslandCard({ island, index }) {
-  return (
-    <Link href={`/islands/${island.slug}`} passHref>
-      <div
-        data-aos="zoom-in-up"
-        className={`cursor-pointer flex flex-col lg:flex-row ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''} items-center gap-4 sm:gap-8 bg-transparent rounded-xl p-4 shadow-lg hover:shadow-xl transition`}
-      >
-        <Image src={island.image} alt={island.name} width={675} height={480} className="rounded-xl shadow-md w-full lg:w-1/2" />
-        <div className="text-center lg:text-left lg:w-1/2">
-          <h3 className="text-xl sm:text-2xl font-semibold mb-2">{island.name}</h3>
-          <p className="text-sm mb-2">{island.description}</p>
-        </div>
-      </div>
-    </Link>
-  );
-}

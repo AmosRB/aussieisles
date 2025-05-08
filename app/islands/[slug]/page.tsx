@@ -3,6 +3,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { islands } from '../../../data/islands';
 
+interface Island {
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+  price: string;
+  location: string;
+  area: string;
+  population: string;
+  waterInfrastructure: string;
+  electricalInfrastructure: string;
+  sewerageInfrastructure: string;
+  proximityToBeach: string;
+  natureReserve: string;
+}
+
 export default async function IslandPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const island = islands.find((i) => i.slug === slug);
@@ -59,5 +75,22 @@ export default async function IslandPage({ params }: { params: Promise<{ slug: s
         </Link>
       </div>
     </main>
+  );
+}
+
+function IslandCard({ island, index }: { island: Island; index: number }) {
+  return (
+    <Link href={`/islands/${island.slug}`} passHref>
+      <div
+        data-aos="zoom-in-up"
+        className={`cursor-pointer flex flex-col lg:flex-row ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''} items-center gap-4 sm:gap-8 bg-transparent rounded-xl p-4 shadow-lg hover:shadow-xl transition`}
+      >
+        <Image src={island.image} alt={island.name} width={675} height={480} className="rounded-xl shadow-md w-full lg:w-1/2" />
+        <div className="text-center lg:text-left lg:w-1/2">
+          <h3 className="text-xl sm:text-2xl font-semibold mb-2">{island.name}</h3>
+          <p className="text-sm mb-2">{island.description}</p>
+        </div>
+      </div>
+    </Link>
   );
 }
