@@ -3,21 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { islands } from '../../../data/islands';
 
-interface Island {
-  slug: string;
-  name: string;
-  description: string;
-  image: string;
-  price: string;
-  location: string;
-  area: string;
-  population: string;
-  waterInfrastructure: string;
-  electricalInfrastructure: string;
-  sewerageInfrastructure: string;
-  proximityToBeach: string;
-  natureReserve: string;
-}
 
 export default async function IslandPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
